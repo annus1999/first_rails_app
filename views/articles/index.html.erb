@@ -1,0 +1,30 @@
+<style>
+  li{
+color: brown;
+background-color: bisque;
+}
+
+#d1{
+    color: grey;
+    background-color: brown;
+    margin-left: 40px;
+    font-family: serif;
+    width: 25%;
+}
+</style>
+
+<h1>Articles#index</h1>
+<h1>hello rails<h1>
+<p>Find me in app/views/articles/index.html.erb</p>
+
+<ul>
+  <% @articles.each do |article| %>
+    <li>
+    <%= link_to article.title, article %>
+    </li>
+  <% end %>
+</ul>
+
+<div id=d1>
+<%= link_to "New article", new_article_path %>
+</div>
